@@ -1,0 +1,139 @@
+.Special_text{
+  font-weight: 500;
+  background: -webkit-linear-gradient(180deg, #0B0BE9 0%, rgba(255, 255, 255, 0) 100%),
+  linear-gradient(0deg, #000033, #000033);;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+  
+.Mid_Content{
+    text-indent: 2em;
+    font-size: 18px;
+}
+
+
+.SubTitle{
+  color:   rgb(0, 42, 78);
+  margin-bottom: 0.3%;
+  margin-top: 0.3%;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  
+}
+
+.Number_of_persons{
+  color:  rgb(3, 77, 143);
+  font-size: 20px;
+  font-weight: 600;
+  cursor: default;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin-left: 15px;
+}
+.Number_of_rooms{ 
+  margin-left: 15px;
+  color:  rgb(3, 77, 143);
+  font-size: 20px;
+  font-weight: 600;
+  cursor: default;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.color{
+  color:   rgb(0, 42, 78);
+  font-weight: 600;
+}
+.borderinfo{
+  margin-top: 10px;
+  border-top: 2px solid rgb(168, 168, 168);
+  border-right: 2px solid rgb(168, 168, 168);
+  border-bottom: 2px solid rgb(168, 168, 168);
+  background-color: rgb(238, 238, 238);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.IMG{
+  width: 100%;
+  height: 340px;
+  border: 5px solid rgb(0, 42, 78);
+  border-radius: 20px;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.IMG:hover{
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  opacity: 1;
+}
+@media only screen and (max-width: 1000px) {
+  .IMG{
+    height: auto;
+  }
+  .Custom_UnderLineB{
+    margin-top: 4%;
+  }
+}
+
+.Links{
+  display: table;
+  box-sizing: border-box;
+  border-image: linear-gradient(to right, rgb(0, 29, 54), rgb(0, 57, 107), rgb(0, 82, 153),rgb(8, 120, 218), rgb(46, 153, 247), rgb(8, 120, 218), rgb(0, 82, 153), rgb(0, 57, 107), rgb(0, 29, 54));
+  border-image-slice: 1;
+  margin-left: auto;
+  margin-right: auto;
+} 
+.Links7{
+  border-top: 3px solid transparent;
+  filter: blur(1px);
+  width: 40%;
+  margin-top: 4px;
+}
+.Links8{
+  border-top: 2px solid transparent;
+  filter: blur(1px);
+  width: 30%;
+  margin-top: 4px;
+  margin-bottom: 3%;
+}
+
+.OptionPlace{
+  padding: 0.5%;
+  border: 2px solid rgb(168, 168, 168);
+  background-color: white;
+  border-radius: 20px;
+
+}
+
+
+.Button_Gutgut{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -2%;
+  text-align:center;
+  font-size: 20px;
+  font-weight: bold;
+  background: white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+   border-radius: 20px;
+   border: 3px solid rgb(3, 102, 189);
+   color: rgb(3, 102, 189);
+   width: 120px;
+   height: 45px;
+   transition-duration: 0.7s;
+}
+.text_button{
+  font-weight: normal;
+  font-size: 700;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.Button_Gutgut:hover{
+  background-color: rgb(163, 212, 255);
+  color: rgb(0, 73, 138);
+  border: 3px solid rgb(0, 73, 138);
+  cursor: pointer;
+}

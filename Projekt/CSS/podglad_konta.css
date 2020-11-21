@@ -1,0 +1,133 @@
+
+.Space{
+    margin-left: 3%;
+}
+.showacc{
+    display: block;
+    text-align: center;
+    font-size: 28px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: rgb(245, 245, 245, 0.85);
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 20px;
+    padding: 3%;
+    
+}
+
+.inputtext{
+    border: 2px solid  rgb(0, 42, 78);
+    border-radius: 650px;
+    padding: 20px;
+    width: 100%; 
+    max-width: 370px;
+    height: 45px;
+   /* float: left; */
+}
+
+@media only screen and (min-width: 1200px) {
+    .rightXD{
+     float: right;
+    }
+    .inputtext{
+        float: left;
+    }
+  }
+
+.yourloans{
+    text-align: center;
+}
+
+table,tr,td,th{
+    border: 2px solid  rgb(0, 42, 78);
+    font-size: 20px;
+    cursor: default;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color:rgb(0, 82, 153) ;
+}   
+
+thead{
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 900px) {
+    table,tr,td,th{
+        font-size: 14px;
+    }
+    .hours{
+        font-size: 12px;
+    }
+  }
+
+  
+  .Links{
+    display: table;
+    box-sizing: border-box;
+    border-image: linear-gradient(to right, rgb(0, 29, 54), rgb(0, 57, 107), rgb(0, 82, 153),rgb(8, 120, 218), rgb(46, 153, 247), rgb(8, 120, 218), rgb(0, 82, 153), rgb(0, 57, 107), rgb(0, 29, 54));
+    border-image-slice: 1;
+    margin-left: auto;
+    margin-right: auto;
+  } 
+  .Links7{
+    border-top: 3px solid transparent;
+    filter: blur(1px);
+    width: 35%;
+    margin-top: 4px;
+  }
+  .Links8{
+    border-top: 2px solid transparent;
+    filter: blur(1px);
+    width: 25%;
+    margin-top: 4px;
+    margin-bottom: 3%;
+  }
+
+  .dane_konta_text{
+    font-size: 25px;
+    font-weight:500;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+  .specialfont{
+    font-weight: 600;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  }
+
+  .CoolButton{
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: -2%;
+    text-align:center;
+    font-size: 20px;
+    font-weight: bold;
+    background: white;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 3px solid rgb(3, 102, 189);
+     color: rgb(3, 102, 189);
+     width: 120px;
+     height: 45px;
+     transition-duration: 0.7s;
+}
+.CoolButton:hover{
+    background-color: rgb(163, 212, 255);
+    color: rgb(0, 73, 138);
+    border: 3px solid rgb(0, 73, 138);
+    cursor: pointer;
+}
+.Main_Page{
+  position: relative;
+}
+.Main_Page::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('Main/gutgut.png');
+  background-size: cover;
+  background-position: center;
+  opacity: .5;
+  content: "";
+  z-index: -1;
+}

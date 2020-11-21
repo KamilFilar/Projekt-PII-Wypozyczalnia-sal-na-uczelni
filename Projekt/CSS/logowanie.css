@@ -1,0 +1,106 @@
+
+  .Mid_Content{
+    font-size: 18px;
+    color:  rgb(0, 42, 78);
+}
+.Space{
+    margin-left: 3%;
+}
+
+.login{
+    text-align: center;
+    font-size: 25px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: rgb(245, 245, 245, 0.85);
+    border: 2px solid rgb(230, 230, 230);
+    border-radius: 20px;
+    padding: 3%;
+}
+.forgot{
+  font-size: 18px;
+}
+.inputtext{
+  background-color: white;
+    border: 2px solid  rgb(0, 42, 78);
+    border-radius: 650px;
+    text-align: center;
+    width: 400px;
+    height: 45px;
+    transition-duration: 0.7s;
+}
+.inputtext:hover{
+  border: 2px solid  rgb(17, 122, 214);
+  transition-duration: 0.7s;
+}
+
+
+
+input[type=submit]{
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -2%;
+  text-align:center;
+  font-size: 20px;
+  font-weight: bold;
+  background: white;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+   border-radius: 20px;
+   border: 3px solid rgb(3, 102, 189);
+   color: rgb(3, 102, 189);
+   width: 150px;
+   height: 45px;
+   transition-duration: 0.7s;
+}
+
+input[type=submit]:hover{
+  background-color: rgb(163, 212, 255);
+  color: rgb(0, 73, 138);
+  border: 3px solid rgb(0, 73, 138);
+  cursor: pointer;
+}
+
+.styleb{
+  font-weight: normal;
+  cursor: default;
+}
+.Links{
+  display: table;
+  box-sizing: border-box;
+  border-image: linear-gradient(to right, rgb(0, 29, 54), rgb(0, 57, 107), rgb(0, 82, 153),rgb(8, 120, 218), rgb(46, 153, 247), rgb(8, 120, 218), rgb(0, 82, 153), rgb(0, 57, 107), rgb(0, 29, 54));
+  border-image-slice: 1;
+  margin-left: auto;
+  margin-right: auto;
+} 
+.Links7{
+  border-top: 3px solid transparent;
+  filter: blur(1px);
+  width: 35%;
+  margin-top: 4px;
+}
+.Links8{
+  border-top: 2px solid transparent;
+  filter: blur(1px);
+  width: 25%;
+  margin-top: 4px;
+  margin-bottom: 3%;
+}
+
+
+.MAIN_Background{
+  position: relative;
+}
+.MAIN_Background::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('Main/gutgut.png');
+  background-size: cover;
+  background-position: center;
+  opacity: .7;
+  content: "";
+  z-index: -1;
+}

@@ -1,0 +1,47 @@
+.Special_text{
+  font-weight: 500;
+  background: -webkit-linear-gradient(180deg, #0B0BE9 0%, rgba(255, 255, 255, 0) 100%),
+  linear-gradient(0deg, #000033, #000033);;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+  
+.Mid_Content{
+    text-indent: 2em;
+    font-size: 18px;
+}
+
+.MAIN{
+  position: relative;
+}
+.MAIN::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('./gutgut.png');
+  background-size: cover;
+  background-position: center;
+  opacity: .2;
+  content: "";
+  z-index: -1;
+}
+.SubTitle{
+  color:  rgb(3, 77, 143);
+  margin-bottom: 0.3%;
+  margin-top: 0.3%;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.Number_of_persons{
+  color:  rgb(3, 77, 143);
+  font-size: 18px;
+  font-weight: 600;
+}
+.Number_of_rooms{
+  color:  rgb(3, 77, 143);
+  font-size: 18px;
+  font-weight: 600;
+}

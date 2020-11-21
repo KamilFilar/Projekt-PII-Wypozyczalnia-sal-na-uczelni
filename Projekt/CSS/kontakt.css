@@ -1,0 +1,64 @@
+.Mid_Content{
+  font-size: 18px;
+  padding: 3%;
+  background-color: rgb(250, 250, 250, 0.85);
+  border: 2px solid rgb(230, 230, 230);
+  border-radius: 20px;
+}
+.Space{
+    margin-left: 3%;
+}
+.Links{
+  display: table;
+  box-sizing: border-box;
+  border-image: linear-gradient(to right, rgb(0, 29, 54), rgb(0, 57, 107), rgb(0, 82, 153),rgb(8, 120, 218), rgb(46, 153, 247), rgb(8, 120, 218), rgb(0, 82, 153), rgb(0, 57, 107), rgb(0, 29, 54));
+  border-image-slice: 1;
+  margin-left: auto;
+  margin-right: auto;
+} 
+.Links7{
+  border-top: 3px solid transparent;
+  filter: blur(1px);
+  width: 40%;
+  margin-top: 4px;
+}
+.Links8{
+  border-top: 2px solid transparent;
+  filter: blur(1px);
+  width: 30%;
+  margin-top: 4px;
+  margin-bottom: 3%;
+}
+
+.NumberPhone1, .NumberPhone2,.AdresEmail {
+  font-size: 25px;
+  color: rgb(1,65,122);
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+.Adress{
+  font-size: 25px;
+  color: rgb(1,65,122);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+
+.MAIN_Background{
+  position: relative;
+}
+.MAIN_Background::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('Main/gutgut.png');
+  background-size: cover;
+  background-position: center;
+  opacity: .7;
+  content: "";
+  z-index: -1;
+}

@@ -1,0 +1,43 @@
+.Special_text{
+  font-weight: 500;
+  background: -webkit-linear-gradient(180deg, #0B0BE9 0%, rgba(255, 255, 255, 0) 100%),
+  linear-gradient(0deg, #000033, #000033);;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+  
+.Mid_Content{
+    text-indent: 2em;
+    font-size: 18px;
+}
+
+.MAIN{
+  position: relative;
+}
+.MAIN::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url('./gutgut.png');
+  background-size: cover;
+  background-position: center;
+  opacity: .2;
+  content: "";
+  z-index: -1;
+}
+.LeftIMG{
+  width: 100%;
+  height: auto;
+  border: 3px solid #000033;
+  -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+
+}
+.LeftIMG:hover{
+  -webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
