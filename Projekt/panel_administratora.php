@@ -3,6 +3,13 @@ session_start();
 if ($_SESSION['islogin'] == '') {
     $_SESSION['islogin'] = 'false';
 }
+
+
+$_SESSION['value']=0;
+if($_SESSION['valueButton']!='true'){
+    $_SESSION['value']=1;
+}
+
 ?>
 
 <!doctype html>
@@ -148,37 +155,6 @@ if ($_SESSION['islogin'] == '') {
                                 echo "Aktualny czas: " . date("H:i:s");
                                 ?>
                             </div>
-
-
-                            <!-- Alerts -->
-                            <script>
-                                function showAlertS() {
-                                    document.getElementById('AlertS').style.display = "block";
-                                }
-
-                                function showAlertD() {
-                                    document.getElementById('AlertD').style.display = "block";
-                                }
-
-                                function showAlertEdit() {
-                                    document.getElementById('AlertEdit').style.display = "block";
-                                }
-                            </script>
-
-
-                            <div id="AlertEdit" class="alert alert-success alert-dismissible fade show">
-                                <strong>Uwaga!</strong> Zamiany zostały pomyślnie zapisane.
-                                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            </div>
-                            <div id="AlertD" class="alert alert-danger alert-dismissible fade show">
-                                <strong>Uwaga!</strong> Rezerwacja została usunięta.
-                                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            </div>
-
-
-
-
-
                             <div class="col col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 my-auto ">
                                 <div>
                                     <p class="AchtungDays">
@@ -545,6 +521,10 @@ if ($_SESSION['islogin'] == '') {
                                         </div>
                                     </div>
                                     ';
+                                            echo '                            <div id="AlertD" class="alert alert-danger alert-dismissible fade show">
+                                    <strong>Uwaga!</strong> Rezerwacja została usunięta.
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                </div>';
                                         } else {
                                             echo '<div class="DataToX">Dane zostaną wczytane w momencie wybrania interesującego Cię wypożyczenia.</div>';
                                         }
@@ -562,7 +542,7 @@ if ($_SESSION['islogin'] == '') {
                                 <div class="collapse" id="collapseExample3">
                                     <div class="card card-body">
                                         <?php
-                                        if ($_SESSION['EditTrue'] == 1) {
+                                        if ($_SESSION['value'] == 1) {
                                             echo '<div class="row justify-content-center">
                                             <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
                                                 <div class="TEXT_DOWN">Data:</div>
@@ -668,6 +648,10 @@ if ($_SESSION['islogin'] == '') {
                                             </button>
                                         </div>
                                     </div>';
+                                            echo '<div id="AlertEdit" class="alert alert-success alert-dismissible fade show">
+                                    <strong>Uwaga!</strong> Zamiany zostały pomyślnie zapisane.
+                                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                </div>';
                                         } else {
                                             echo '<div class="DataToX">Dane zostaną wczytane w momencie wybrania interesującego Cię wypożyczenia.</div>';
                                         }
@@ -710,106 +694,299 @@ if ($_SESSION['islogin'] == '') {
                                             <div class="card card-body">
                                                 <div class="row justify-content-center">
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula im. Lorem ipsum</p>
-                                                        <p>A3</p>
+                                                        <div class="row justify-content-center">Sala konfenrencyjna duża</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            B4 s.231
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula im. Lorem ipsum</p>
-                                                        <p>F1</p>
+                                                        <div class="row justify-content-center">Aula im. Lorem ipsum</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            F1
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula im. Lorem ipsum</p>
-                                                        <p>B23</p>
+                                                        <div class="row justify-content-center">Aula im. Lorem ipsum</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            B23
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula im. Lorem ipsum</p>
-                                                        <p>B5</p>
+                                                        <div class="row justify-content-center">Aula im. Lorem ipsum</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            B5
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Sala konfenrencyjna duża</p>
-                                                        <p>B4 s.231</p>
+                                                        <div class="row justify-content-center">Sala konfenrencyjna duża</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            B4 s.231
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Sala konfenrencyjna</p>
-                                                        <p>B1 s.142</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row justify-content-center">
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Sala konfenrencyjna</p>
-                                                        <p>B1 s.178</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Sala konfenrencyjna</p>
-                                                        <p>B3 s.190</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Sala konfenrencyjna mała</p>
-                                                        <p>B2 s.140</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Pracownia komputerowa</p>
-                                                        <p>A2 s.300</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Pracownie komputerowe</p>
-                                                        <p>A3 s.254</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Pracownie komputerowe</p>
-                                                        <p>A1 s.75</p>
-                                                    </div>
-                                                </div>
-                                                <div class="row justify-content-center">
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula</p>
-                                                        <p>A2 s.300</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula</p>
-                                                        <p>A2 s.2</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula im. Lorem Ipsum</p>
-                                                        <p>A2 s.5</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula</p>
-                                                        <p>A2 s.5</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula mała</p>
-                                                        <p>A3 s.1</p>
-                                                    </div>
-                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Aula</p>
-                                                        <p>A2 s.8</p>
+                                                        <div class="row justify-content-center">Sala konfenrencyjna</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            B1 s.142
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="row justify-content-center">
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Hala</p>
-                                                        <p>G1 s.1</p>
+                                                        <div class="row justify-content-center">Sala konfenrencyjna</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            B1 s.178
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Hala im. Lorem sportowca</p>
-                                                        <p>G1 s.2</p>
+                                                        <div class="row justify-content-center">Sala konfenrencyjna</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            B3 s.190
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Sala gimnastyczna</p>
-                                                        <p>G1 s.5</p>
+                                                        <div class="row justify-content-center">Sala konfenrencyjna mała</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            B2 s.140
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Sala koncertowa</p>
-                                                        <p>F4 s.3</p>
+                                                        <div class="row justify-content-center">Pracownia komputerowe</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            A2 s.300
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Sala teatralna </p>
-                                                        <p>F4 s.2</p>
+                                                        <div class="row justify-content-center">Pracownia komputerowe</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            A3 s.254
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                     <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
-                                                        <p>Galeria</p>
-                                                        <p>F4 s.5</p>
+                                                        <div class="row justify-content-center">Pracownia komputerowe</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            A1 s.75
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Aula</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            A2 s.300
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Aula</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            A2 s.2
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+
+                                                        <div class="row justify-content-center">Aula im. Lorem ipsum</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            A2 s.5
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Aula</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            A2 s.5
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Aula mała</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            A3 s.1
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Aula</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            A2 s.8
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Hala</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            G1 s.1
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Hala im. Lorem sportowca</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            G1 s.2
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Sala gimnastyczna</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            G1 s.5
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Sala koncertowa</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            F4 s.3
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Sala teatralna</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            F4 s.2
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <div class="row justify-content-center">Galeria</div>
+                                                        <div class="row justify-content-center" style="color:  rgb(0, 52, 97);">
+                                                            F4 s.5
+                                                        </div>
+                                                        <div class="row justify-content-center">
+                                                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"></div>
+                                                            <div class="col col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1 text-center">
+                                                                <input type="checkbox" class="PRight" />
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -851,15 +1028,7 @@ if ($_SESSION['islogin'] == '') {
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">7:30-8:00</td>
                                     <td style="border-top: 2px solid  red; background-color: rgb(245, 159, 159);">
                                         <form method="post">
-                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1"><br /><br />
-                                            <?php
-                                            $_SESSION['EditTrue'] = 0;
-                                            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                                                if (isset($_POST['Submit1'])) {
-                                                    $_SESSION['EditTrue'] = 1;
-                                                }
-                                            }
-                                            ?>
+                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()"><br /><br />
                                     </td>
                                     <td></td>
                                     <td></td>
@@ -1117,7 +1286,7 @@ if ($_SESSION['islogin'] == '') {
             </div>
         </div>
         </br>
-            </br>
+        </br>
         <div class="Separator1">
             </br>
             </br>
@@ -1232,6 +1401,29 @@ if ($_SESSION['islogin'] == '') {
             </div>
         </footer>
     </div>
-</body>
 
+    <!-- Alerts -->
+<script>
+    function showAlertS() {
+        document.getElementById('AlertS').style.display = "block";
+    }
+
+    function showAlertD() {
+        document.getElementById('AlertD').style.display = "block";
+    }
+
+    function showAlertEdit() {
+        document.getElementById('AlertEdit').style.display = "block";
+    }
+</script>
+  <!-- OnclickValue -->
+<script>
+    function pickLoan(){
+        <?php
+            $_SESSION['valueButton'] = true;
+        ?>
+    }
+</script>
+
+</body>
 </html>
