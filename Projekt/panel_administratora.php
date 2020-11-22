@@ -113,7 +113,7 @@ if ($_SESSION['islogin'] == '') {
                 <div class="row justify-content-center BackgroundROW">
                     <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-12 NiceBorder">
                         <div class="row">
-                            <div class="col col-xl-4 col-lg-5 col-md-6 col-sm-10 col-10 DateBox">
+                            <div class="col col-xl-4 col-lg-6 col-md-6 col-sm-10 col-10 DateBox">
                                 <?php
                                 if (date('l') == 'Saturday') {
                                     echo 'Dziś jest: Sobota ';
@@ -148,7 +148,38 @@ if ($_SESSION['islogin'] == '') {
                                 echo "Aktualny czas: " . date("H:i:s");
                                 ?>
                             </div>
-                            <div class="col col-xl-8 col-lg-7 col-md-6 col-sm-2 col-2 my-auto" style="border: 2px solid black;">
+
+
+                            <!-- Alerts -->
+                            <script>
+                                function showAlertS() {
+                                    document.getElementById('AlertS').style.display = "block";
+                                }
+
+                                function showAlertD() {
+                                    document.getElementById('AlertD').style.display = "block";
+                                }
+
+                                function showAlertEdit() {
+                                    document.getElementById('AlertEdit').style.display = "block";
+                                }
+                            </script>
+
+
+                            <div id="AlertEdit" class="alert alert-success alert-dismissible fade show">
+                                <strong>Uwaga!</strong> Zamiany zostały pomyślnie zapisane.
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            </div>
+                            <div id="AlertD" class="alert alert-danger alert-dismissible fade show">
+                                <strong>Uwaga!</strong> Rezerwacja została usunięta.
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                            </div>
+
+
+
+
+
+                            <div class="col col-xl-8 col-lg-12 col-md-12 col-sm-12 col-12 my-auto ">
                                 <div>
                                     <p class="AchtungDays">
                                         <button class="ButtonAchtung" type="button" data-toggle="collapse" data-target="#collapseExample4" aria-expanded="false" aria-controls="collapseExample2">
@@ -158,27 +189,113 @@ if ($_SESSION['islogin'] == '') {
                                     <div class="collapse" id="collapseExample4">
                                         <div class="card card-body">
                                             <div class="row justify-content-center">
-                                                <div class="col col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
-                                                    <p class="UPText">Wykaz dni, w których uczelnia nie przyjmuje rezerwacji sal:</p>
-                                                </div>
-                                                <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                                <div class="row justify-content-center"> 
-                                                    <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 text-center">
-                                                        <p class="UnderSubText"><b class="borderSubText">Grudzień <?php echo date('Y') ?></b></p>
-                                                        <p>24.11.2020</p>
-                                                        <p>25.11.2020</p>
-                                                        <p>26.12.2020</p>
-                                                        <p>27.12.2020</p>
-                                                    </div>
-                                                    <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 text-center">
-                                                        <p class="UnderSubText"><b class="borderSubText">Styczeń 2021</b></p>
-                                                        <p>01.01.2021</p>
-                                                        <p>03.01.2021</p>
-                                                        <p>26.11.2020</p>
-                                                    </div>
-                                                    <div class="col col-xl-4 col-lg-4 col-md-12 col-sm-12 col-12 text-center">
-                                                        <p class="UnderSubText"><b class="borderSubText">Luty 2021</b></p> 
-                                                    </div>
+                                                <div class="col col-xl-11 col-lg-11 col-md-11 col-sm-11 col-11 text-center">
+                                                    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+                                                        <div class="carousel-inner" style="box-shadow: 0px 0px 15px 15px rgb(3, 77, 143);">
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/1.jpg" alt="1">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Styczeń:</h5>
+                                                                    <p class="datefree">01.01.2021r.</p>
+                                                                    <p class="datefree">06.01.2021r.</p>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/2.jpg" alt="2">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Luty:</h5>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/3.jpg" alt="3">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Marzec:</h5>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/4.jpg" alt="4">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Kwiecień:</h5>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/5.jpg" alt="5">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Maj:</h5>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/6.jpg" alt="6">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Czerwiec:</h5>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/7.jpg" alt="7">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Lipiec:</h5>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/8.jpg" alt="8">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Sierpień:</h5>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/9.jpg" alt="9">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Wrzesień:</h5>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/10.jpg" alt="10">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Październik:</h5>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="carousel-item active">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/11.jpg" alt="11">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Listopad:</h5>
+                                                                    <p class="datefree">01.11.2020</p>
+                                                                    <p class="datefree">11.11.2020</p>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="carousel-item">
+                                                                <img class="d-block ImageCarusel" src="./CSS/Images/12.jpg" alt="12">
+                                                                <div class="carousel-caption d-none d-md-block">
+                                                                    <h5 class="LitleTitleMonth">Grudzień:</h5>
+                                                                    <p class="datefree">24.12.2020</p>
+                                                                    <p class="datefree">25.12.2020</p>
+                                                                    <p class="datefree">26.12.2020</p>
+                                                                    <p class="datefree">27.12.2020</p>
+                                                                    <p class="datefree">30.12.2020</p>
+                                                                    <p class="datefree">"Daty wolne"</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                            <span class="sr-only">Previous</span>
+                                                        </a>
+                                                        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="sr-only">Next</span>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -192,7 +309,7 @@ if ($_SESSION['islogin'] == '') {
 
                         </div>
                         <div class="row justify-content-center">
-                            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center" style="border: 2px solid black;">
+                            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
                                 <p>
                                     <button class="Button_Rev ButtonColor2" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
                                         <i class="fas fa-plus-circle fa-lg"></i> Dodaj wypożyczenie
@@ -294,11 +411,25 @@ if ($_SESSION['islogin'] == '') {
                                                 </select>
                                             </div>
                                         </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-2 col-lg-4 col-md-4 col-sm-4 col-6 my-auto mx-auto">
+                                                <button class="ButtonOK ButtonColorOK" onclick="showAlertS()"><i class="far fa-check-circle fa-2x"></i></button>
+                                            </div>
+                                            <div class="col col-xl-2 col-lg-4 col-md-4 col-sm-4 col-6 my-auto mx-auto">
+                                                <button class="ButtonReturn ButtonColorReturn" style="cursor: pointer; border: 0px;" type="button" data-toggle="collapse" data-target="#collapseExample1" aria-expanded="false" aria-controls="collapseExample1">
+                                                    <i class="far fa-times-circle fa-2x"></i>
+                                                </button>
+                                            </div>
+                                            <div id="AlertS" class="alert alert-success alert-dismissible fade show">
+                                                <strong>Uwaga!</strong> Pomyślnie dodano rezerwację.
+                                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
                             </div>
-                            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center" style="border: 2px solid black;">
+                            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
                                 <p>
                                     <button class="Button_Rev ButtonColor3" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
                                         <i class="fas fa-trash-restore-alt fa-lg"></i> Usuń wypożyczenie
@@ -307,18 +438,122 @@ if ($_SESSION['islogin'] == '') {
                                 <div class="collapse" id="collapseExample2">
                                     <div class="card card-body">
                                         <?php
-                                        if (!empty($_POST['lang'])) {
-
-                                            echo 'Nie ma żubrówki';
+                                        if ($_SESSION['EditTrue'] == 1) {
+                                            echo '<div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Data:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="DD - MM - YY" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Nazwa sali:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Nazwa sali" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Typ sali:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Typ sali" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Czas od:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="HH:MM" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Czas do:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="HH:MM" />
+                                            </div>
+                                        </div>
+                                        <div class="HugeLinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Dane:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Imię i naziwsko" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Nr. tel.:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Nr. tel." />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">E-mail:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="E-mail:" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Status</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Status:" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Stan opłaty:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <select id="data" name="data" class="dropdown2">
+                                                    <option value="1" selected="selected" disabled>Stan opłaty</option>
+                                                    <option value="2">Zapłacona</option>
+                                                    <option value="3">Niezapłacona</option>
+                                                    <option value="4">Nie dotyczy</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                        <div class="col col-xl-2 col-lg-4 col-md-4 col-sm-4 col-6 my-auto mx-auto">
+                                            <button class="ButtonOK ButtonColorOK" onclick="showAlertD()"><i class="far fa-check-circle fa-2x"></i></button>
+                                        </div>
+                                        <div class="col col-xl-2 col-lg-4 col-md-4 col-sm-4 col-6 my-auto mx-auto">
+                                            <button class="ButtonReturn ButtonColorReturn" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                                                <i class="far fa-times-circle fa-2x"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    ';
                                         } else {
-                                            echo 'Żubrówka';
+                                            echo '<div class="DataToX">Dane zostaną wczytane w momencie wybrania interesującego Cię wypożyczenia.</div>';
                                         }
                                         ?>
                                     </div>
                                 </div>
 
                             </div>
-                            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center" style="border: 2px solid black;">
+                            <div class="col col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
                                 <p>
                                     <button class="Button_Rev ButtonColor1" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
                                         <i class="fas fa-pencil-ruler fa-lg"></i> Edytuj wypożyczenie
@@ -326,64 +561,268 @@ if ($_SESSION['islogin'] == '') {
                                 </p>
                                 <div class="collapse" id="collapseExample3">
                                     <div class="card card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+                                        <?php
+                                        if ($_SESSION['EditTrue'] == 1) {
+                                            echo '<div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Data:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="DD - MM - YY" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Nazwa sali:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Nazwa sali" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Typ sali:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Typ sali" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Czas od:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="HH:MM" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Czas do:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="HH:MM" />
+                                            </div>
+                                        </div>
+                                        <div class="HugeLinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Dane:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Imię i naziwsko" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Nr. tel.:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Nr. tel." />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">E-mail:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="E-mail:" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Status</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <input type="text" class="INPUT_DOWN" placeholder="Status:" />
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                            <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
+                                                <div class="TEXT_DOWN">Stan opłaty:</div>
+                                            </div>
+                                            <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
+                                                <select id="data" name="data" class="dropdown2">
+                                                    <option value="1" selected="selected" disabled>Stan opłaty</option>
+                                                    <option value="2">Zapłacona</option>
+                                                    <option value="3">Niezapłacona</option>
+                                                    <option value="4">Nie dotyczy</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="LinksSep"></div>
+                                        <div class="row justify-content-center">
+                                        <div class="col col-xl-2 col-lg-4 col-md-4 col-sm-4 col-6 my-auto mx-auto">
+                                            <button class="ButtonOK ButtonColorOK"><i class="far fa-check-circle fa-2x"></i></button>
+                                        </div>
+                                        <div class="col col-xl-2 col-lg-4 col-md-4 col-sm-4 col-6 my-auto mx-auto">
+                                            <button class="ButtonReturn ButtonColorReturn" onclick="showAlertEdit()" type="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                                                <i class="far fa-times-circle fa-2x"></i>
+                                            </button>
+                                        </div>
+                                    </div>';
+                                        } else {
+                                            echo '<div class="DataToX">Dane zostaną wczytane w momencie wybrania interesującego Cię wypożyczenia.</div>';
+                                        }
+                                        ?>
                                     </div>
                                 </div>
-
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
-                </div>
-                </br>
-                <div class="row justify-content-center">
-                    <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10">
-                        <div class="Title_of_Page">Stan sal</div>
-                        <div class="row">
-                            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
-                                <div class="row justify-content-center">
-                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
-                                        <select id="data" name="data" class="dropdown">
-                                            <option value="1" selected="selected" disabled>Nazwa sali</option>
-                                            <option value="2">Aula A3 im. Lorem Ipsum s.3</option>
-                                            <option value="3">Sala konferencyjna F2 s.231</option>
-                                            <option value="4">...</option>
-                                            <option value="5">Sala gimnastyczna G2 s.1</option>
-                                            <option value="6">Aula mała A4 s.234</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
-                                        <select id="data" name="data" class="dropdown">
-                                            <option value="1" selected="selected" disabled>Typ sali</option>
-                                            <option value="2">Konferencyjna</option>
-                                            <option value="3">Sportowa</option>
-                                            <option value="4">...</option>
-                                            <option value="5">Aula</option>
-                                            <option value="6">Duża aula</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
-                                        <input type="text" class="input_down" placeholder="Max. ilość osób" />
-                                    </div>
-                                    <div class="col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
-                                        <input type="text" class="input_down" placeholder="Data" />
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-                        <div class="Custom_UnderLineAA"></div>
-                        <div class="Custom_underLineBB"></div>
                     </div>
                 </div>
                 </br></br>
 
+                <div class="row justify-content-center">
+                    <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                        <div class="Title_of_Page">Stan sal</div>
+                        <div class="Links LinksKL"></div>
+                        <div class="Links LinksK"></div>
+
+                    </div>
+                </div>
+                <div class="row justify-content-center BackgroundROW">
+                    <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-12 NiceBorder">
+                        <div class="row">
+                            <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="row justify-content-center">
+                                    <div class="col col-xl-8 col-lg-10 col-md-10 col-sm-10 col-10 text-center">
+                                        <input class='SearchInput2' type='search' placeholder='Wyszukaj... ' />
+                                        <button class='SearchButton2' type='submit'><i class='fa fa-search' style='color: white;'></i></button>
+                                    </div>
+                                </div>
+                                </br></br>
+                                <div class="row justify-content-center">
+                                    <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                                        <p>
+                                            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample5" aria-expanded="false" aria-controls="collapseExample5">
+                                                Zobacz wszystkie
+                                            </button>
+                                        </p>
+                                        <div class="collapse" id="collapseExample5">
+                                            <div class="card card-body">
+                                                <div class="row justify-content-center">
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula im. Lorem ipsum</p>
+                                                        <p>A3</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula im. Lorem ipsum</p>
+                                                        <p>F1</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula im. Lorem ipsum</p>
+                                                        <p>B23</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula im. Lorem ipsum</p>
+                                                        <p>B5</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Sala konfenrencyjna duża</p>
+                                                        <p>B4 s.231</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Sala konfenrencyjna</p>
+                                                        <p>B1 s.142</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Sala konfenrencyjna</p>
+                                                        <p>B1 s.178</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Sala konfenrencyjna</p>
+                                                        <p>B3 s.190</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Sala konfenrencyjna mała</p>
+                                                        <p>B2 s.140</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Pracownia komputerowa</p>
+                                                        <p>A2 s.300</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Pracownie komputerowe</p>
+                                                        <p>A3 s.254</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Pracownie komputerowe</p>
+                                                        <p>A1 s.75</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula</p>
+                                                        <p>A2 s.300</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula</p>
+                                                        <p>A2 s.2</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula im. Lorem Ipsum</p>
+                                                        <p>A2 s.5</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula</p>
+                                                        <p>A2 s.5</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula mała</p>
+                                                        <p>A3 s.1</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Aula</p>
+                                                        <p>A2 s.8</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row justify-content-center">
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Hala</p>
+                                                        <p>G1 s.1</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Hala im. Lorem sportowca</p>
+                                                        <p>G1 s.2</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Sala gimnastyczna</p>
+                                                        <p>G1 s.5</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Sala koncertowa</p>
+                                                        <p>F4 s.3</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Sala teatralna </p>
+                                                        <p>F4 s.2</p>
+                                                    </div>
+                                                    <div class="col col-xl-2 col-lg-2 col-md-6 col-sm-12 col-12 ChangeClass">
+                                                        <p>Galeria</p>
+                                                        <p>F4 s.5</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </br></br>
                 <div class="admin">
                     <div class="table-responsive">
-
                         <table class="table table-hover">
                             <thead>
                                 <tr>
@@ -411,9 +850,16 @@ if ($_SESSION['islogin'] == '') {
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">7:30-8:00</td>
                                     <td style="border-top: 2px solid  red; background-color: rgb(245, 159, 159);">
-                                        <form method="post" action="">
-                                            <input type="checkbox" name='lang[]'>Nazwa sali
-                                        </form>
+                                        <form method="post">
+                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1"><br /><br />
+                                            <?php
+                                            $_SESSION['EditTrue'] = 0;
+                                            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                                                if (isset($_POST['Submit1'])) {
+                                                    $_SESSION['EditTrue'] = 1;
+                                                }
+                                            }
+                                            ?>
                                     </td>
                                     <td></td>
                                     <td></td>
@@ -496,7 +942,7 @@ if ($_SESSION['islogin'] == '') {
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">11:30-12:00</td>
                                     <td></td>
                                     <td></td>
-                                    <td style="background-color: rgb(99, 228, 99);">Konferencja naukowa</td>
+                                    <td style="background-color: rgb(99, 228, 99);">Konferencja</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -668,169 +1114,14 @@ if ($_SESSION['islogin'] == '') {
                         </table>
                     </div>
                 </div>
-
-
-                </br></br>
-                <div class="row justify-content-center">
-                    <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10">
-                        <div class="Title_of_Page">Panel rezerwacji</div>
-                        <div class="row justify-content-center">
-                            <div class="col col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12 DateBox">
-                                Poniedziałek, 19 październik 2020 - tydzień trzeci
-                            </div>
-                            <div class="Custom_UnderLineAA"></div>
-                            <div class="Custom_underLineBB"></div>
-                        </div>
-                        </br></br>
-                        <div class="row justify-content-center">
-                            <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-12 col-12">
-                                <div class="row justify-content-center">
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Data (DD-MM-YY):</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                        <input type="text" class="INPUT_DOWN" placeholder="Data (DD-MM-YY)" />
-                                    </div>
-                                    <div class="col col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12">
-                                    </div>
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Imię i nazwisko:</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                        <input type="text" class="INPUT_DOWN" placeholder="Imię i nazwisko" />
-                                    </div>
-                                </div>
-                                </br>
-                                <div class="row justify-content-center">
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Nazwa sali:</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                        <input type="text" class="INPUT_DOWN" placeholder="Nazwa sali" />
-                                    </div>
-                                    <div class="col col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12">
-                                    </div>
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Nr. telefonu:</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                        <input type="text" class="INPUT_DOWN" placeholder="Nr. telefonu" />
-                                    </div>
-                                </div>
-                                </br>
-                                <div class="row justify-content-center">
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Typ sali:</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                        <input type="text" class="INPUT_DOWN" placeholder="Typ sali" />
-                                    </div>
-                                    <div class="col col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12">
-                                    </div>
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Email:</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                        <input type="text" class="INPUT_DOWN" placeholder="E-mail" />
-                                    </div>
-                                </div>
-                                </br>
-                                <div class="row justify-content-center">
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Czas (od):</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                        <input type="text" class="INPUT_DOWN" placeholder="Czas (od)" />
-                                    </div>
-                                    <div class="col col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12">
-                                    </div>
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Status:</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
-                                        <select id="data" name="data" class="dropdown2">
-                                            <option value="1" selected="selected" disabled>Status</option>
-                                            <option value="2">Zwykły użyszkodnik</option>
-                                            <option value="3">Student</option>
-                                            <option value="4">Pracownik</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                </br>
-                                <div class="row justify-content-center">
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Czas (do):</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12">
-                                        <input type="text" class="INPUT_DOWN" placeholder="Czas (od)" />
-                                    </div>
-                                    <div class="col col-xl-1 col-lg-1 col-md-12 col-sm-12 col-12">
-                                    </div>
-                                    <div class="col col-xl-2 col-lg-2 col-md-12 col-sm-12 col-12">
-                                        <div class="TEXT_DOWN">Stan opłaty:</div>
-                                    </div>
-                                    <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
-                                        <select id="data" name="data" class="dropdown2">
-                                            <option value="1" selected="selected" disabled>Status</option>
-                                            <option value="2">Zapłacona</option>
-                                            <option value="3">Niezapłacona</option>
-                                            <option value="4">Nie dotyczy</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </br>
-                </br>
-                <div class="row justify-content-center">
-                    <div class="col col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
-                        <div class="row justify-content-center">
-                            <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
-                                <button type="button" class="Button2" onclick="showAlertD()">Usuń</button>
-                            </div>
-                            <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
-                                <button type="button" class="Button1" onclick="showAlertS()">Dodaj</button>
-                            </div>
-                            <div class="col col-xl-3 col-lg-3 col-md-12 col-sm-12 col-12 text-center">
-                                <button type="button" class="Button1" onclick="showAlertEdit()">Zapisz</button>
-                            </div>
-                            <script>
-                                function showAlertS() {
-                                    document.getElementById('AlertS').style.display = "block";
-                                }
-
-                                function showAlertD() {
-                                    document.getElementById('AlertD').style.display = "block";
-                                }
-
-                                function showAlertEdit() {
-                                    document.getElementById('AlertEdit').style.display = "block";
-                                }
-                            </script>
-
-                            <div id="AlertS" class="alert alert-success alert-dismissible fade show">
-                                <strong>Uwaga!</strong> Pomyślnie dodano rezerwację.
-                                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            </div>
-                            <div id="AlertD" class="alert alert-danger alert-dismissible fade show">
-                                <strong>Uwaga!</strong> Rezerwacja została usunięta.
-                                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            </div>
-                            <div id="AlertEdit" class="alert alert-success alert-dismissible fade show">
-                                <strong>Uwaga!</strong> Zamiany zostały pomyślnie zapisane.
-                                <button type="button" class="close" data-dismiss="alert">&times;</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                </br>
-                </br>
-                </br>
             </div>
-
+        </div>
+        </br>
+            </br>
+        <div class="Separator1">
+            </br>
+            </br>
+            </br>
         </div>
         <footer class="footer">
             <div class="container-fluid">

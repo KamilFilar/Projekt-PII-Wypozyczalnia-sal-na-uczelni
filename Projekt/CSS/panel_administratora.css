@@ -21,37 +21,28 @@ table,tr,td,th{
     border-left: 2px solid  rgb(0, 42, 78);
     font-size: 20px;
 }  
-
-.Custom_UnderLineAA{
-  border-bottom: 3px solid rgb(0, 42, 78);
-  filter: blur(1px);
-  margin-top: 0.5%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+.SearchInput2{
+  border: 2px solid rgb(0, 29, 54);
+  height: 40px;
+  width: 80%;
+  text-indent: 1em;
 }
-.Custom_underLineBB{
-  border-bottom: 3px solid rgb(3, 77, 143);
-  filter: blur(1px);
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0.3%;
-  margin-bottom: 0.3%;
+.SearchButton2{
+  border: 2px solid rgb(0, 29, 54);
+  height: 40px;
+  margin-left: -5px;
+  background-color: rgb(3, 77, 143);
+  cursor: pointer;
 }
-.dropdown{
-  min-width: 180px;
-  max-width: 320px;
-  width: 100%;
-  height: 35px;
-  text-align: center;
+.ChangeClass{
+  border: 2px solid rgb(0, 52, 97);
+  color: rgb(0, 102, 190);
+  font-weight: 500;
+  padding: 1%;
+  margin-right: -2px;
+  margin-bottom: -2px;
   font-size: 18px;
-
-  border-radius: 650px;
-  border:2px solid #000033;
-
-  margin-top: 5%;
-  margin-bottom: 5%;
+  background: linear-gradient(rgb(221, 239, 255), rgba(255,255,255));
 }
 
 .input_down{
@@ -207,7 +198,7 @@ table,tr,td,th{
   }
 }
 
-.Button_Rev{
+.Button_Rev, .ButtonOK,.ButtonReturn{
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -258,6 +249,27 @@ table,tr,td,th{
   color: rgb(158, 0, 0);
   border: 3px solid rgb(92, 2, 2);
 }
+.ButtonColorOK{
+  color: rgb(0, 138, 18);
+  border: 0px;
+  cursor: pointer;
+}
+.ButtonColorOK:hover{
+  color: rgb(0, 196, 26);
+  border: 0px;
+  cursor: pointer;
+}
+.ButtonColorReturn{
+  color: rgb(158, 0, 0);
+  border: 0px;
+  cursor: pointer;
+}
+.ButtonColorReturn:hover{
+  color: rgb(233, 0, 0);
+  border: 0px;
+  cursor: pointer;
+}
+
 
 
 .SubTitle{
@@ -271,7 +283,7 @@ table,tr,td,th{
 
 .NiceBorder{
   font-family: "Comic Sans MS", cursive, sans-serif;
-    background-color: rgba(221, 239, 255, 0.85);
+  background: linear-gradient(rgb(221, 239, 255), rgba(255,255,255));
     border: 2px solid rgb(230, 230, 230);
     box-shadow: 0px 0px 15px 15px rgb(3, 77, 143);
     border-radius: 20px;
@@ -304,6 +316,19 @@ table,tr,td,th{
   margin-top: 4px;
   margin-bottom: 3%;
 }
+.LinksKL{
+  border-top: 3px solid transparent;
+  filter: blur(1px);
+  width: 250px;
+  margin-top: 4px;
+}
+.LinksK{
+  border-top: 2px solid transparent;
+  filter: blur(1px);
+  width: 220px;
+  margin-top: 4px;
+  margin-bottom: 3%;
+}
 .LinksSep{
   border-top: 1px solid rgb(88, 88, 88);
   filter: blur(1px);
@@ -321,4 +346,70 @@ table,tr,td,th{
   width: 100%;
   margin-top: 3%;
   margin-bottom: 3%;
+}
+.ImageCarusel{
+  width:100%; 
+  height: 450px !important;
+  background-size: cover;
+}
+@media only screen and (max-width: 1000px) {
+  .ImageCarusel{
+    height: 400px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .ImageCarusel{
+    height: 350px !important;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .ImageCarusel{
+    height: 300px !important;
+  }
+}
+.LitleTitleMonth{
+  font-size: 25px;
+  font-weight: 600;
+  background-color:rgba(0, 126, 10, 0.7);
+  border-bottom: 2px solid rgb(230, 230, 230);
+  border-top: 2px solid rgb(230, 230, 230);
+  border-radius: 20px;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+.datefree{
+  font-size: 21px;
+  font-weight: 500;
+  background-color:rgba(0, 126, 10, 0.7);
+  border-bottom: 2px solid rgb(230, 230, 230);
+  border-top: 2px solid rgb(230, 230, 230);
+  border-radius: 20px;
+  width: 180px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+}
+.ButtonEdit{
+  color: rgb(3, 77, 143);
+  border: 2px solid rgb(3, 77, 143);
+  border-radius: 10px;
+  width: 50px;
+  height: 50px;
+  padding: 1%;
+  text-align: center;
+  background-color: rgba(0, 126, 10, 0.0);
+  cursor: pointer;
+  transition-duration: 0.7s;
+}
+.ButtonEdit:hover{
+  color: rgb(0, 109, 204);
+  border: 2px solid rgb(0, 109, 204);
+  transition-duration: 0.7s;
+}
+.DataToX{
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(3, 77, 143);
 }
