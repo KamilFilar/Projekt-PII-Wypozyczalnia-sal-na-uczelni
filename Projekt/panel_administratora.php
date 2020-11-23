@@ -1,12 +1,13 @@
 <?php
 session_start();
+
 if ($_SESSION['islogin'] == '') {
     $_SESSION['islogin'] = 'false';
 }
 
-
+//$_SESSION['valueButton']='false';
 $_SESSION['value']=0;
-if($_SESSION['valueButton']!='true'){
+if($_SESSION['valueButton']=='true'){
     $_SESSION['value']=1;
 }
 
@@ -376,11 +377,11 @@ if($_SESSION['valueButton']!='true'){
                                         <div class="LinksSep"></div>
                                         <div class="row justify-content-center">
                                             <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
-                                                <div class="TEXT_DOWN">Stan opłaty:</div>
+                                                <div class="TEXT_DOWN">Opłata:</div>
                                             </div>
                                             <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
                                                 <select id="data" name="data" class="dropdown2">
-                                                    <option value="1" selected="selected" disabled>Stan opłaty</option>
+                                                    <option value="1" selected="selected" disabled>Opłata</option>
                                                     <option value="2">Zapłacona</option>
                                                     <option value="3">Niezapłacona</option>
                                                     <option value="4">Nie dotyczy</option>
@@ -414,7 +415,7 @@ if($_SESSION['valueButton']!='true'){
                                 <div class="collapse" id="collapseExample2">
                                     <div class="card card-body">
                                         <?php
-                                        if ($_SESSION['EditTrue'] == 1) {
+                                        if ($_SESSION['value'] == 1) {
                                             echo '<div class="row justify-content-center">
                                             <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
                                                 <div class="TEXT_DOWN">Data:</div>
@@ -498,11 +499,11 @@ if($_SESSION['valueButton']!='true'){
                                         <div class="LinksSep"></div>
                                         <div class="row justify-content-center">
                                             <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
-                                                <div class="TEXT_DOWN">Stan opłaty:</div>
+                                                <div class="TEXT_DOWN">Opłata:</div>
                                             </div>
                                             <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
                                                 <select id="data" name="data" class="dropdown2">
-                                                    <option value="1" selected="selected" disabled>Stan opłaty</option>
+                                                    <option value="1" selected="selected" disabled>Opłata</option>
                                                     <option value="2">Zapłacona</option>
                                                     <option value="3">Niezapłacona</option>
                                                     <option value="4">Nie dotyczy</option>
@@ -626,11 +627,11 @@ if($_SESSION['valueButton']!='true'){
                                         <div class="LinksSep"></div>
                                         <div class="row justify-content-center">
                                             <div class="col col-xl-4 col-lg-11 col-md-11 col-sm-11 col-11 my-auto">
-                                                <div class="TEXT_DOWN">Stan opłaty:</div>
+                                                <div class="TEXT_DOWN">Opłata:</div>
                                             </div>
                                             <div class="col col-xl-8 col-lg-11 col-md-11 col-sm-11 col-11">
                                                 <select id="data" name="data" class="dropdown2">
-                                                    <option value="1" selected="selected" disabled>Stan opłaty</option>
+                                                    <option value="1" selected="selected" disabled>Opłata</option>
                                                     <option value="2">Zapłacona</option>
                                                     <option value="3">Niezapłacona</option>
                                                     <option value="4">Nie dotyczy</option>
@@ -999,8 +1000,10 @@ if($_SESSION['valueButton']!='true'){
                 </div>
                 </br></br>
                 <div class="admin">
+                    <div class="BorderTable">
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        
+                        <table class="table table-hover BorderTable">
                             <thead>
                                 <tr>
                                     <th scope="col" style="border: 2px solid  rgb(0, 42, 78)"></th>
@@ -1026,9 +1029,12 @@ if($_SESSION['valueButton']!='true'){
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">7:30-8:00</td>
-                                    <td style="border-top: 2px solid  red; background-color: rgb(245, 159, 159);">
+                                    <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
                                         <form method="post">
                                             <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()"><br /><br />
+                                            Informatyka<br>
+                                            Jan Kowalski<br>
+                                            Student
                                     </td>
                                     <td></td>
                                     <td></td>
@@ -1039,21 +1045,27 @@ if($_SESSION['valueButton']!='true'){
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">8:00-8:30</td>
-                                    <td style="background-color: rgb(245, 159, 159);">Informatyka rok 3</td>
                                     <td></td>
                                     <td></td>
+                                   
                                     <td></td>
-                                    <td></td>
+                                    <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
+                                    <form method="post">
+                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()"><br /><br />
+                                        Nazwa sali<br>
+                                        Szkolenie<br>
+                                        Jan Kowalski<br>
+                                        Pracownik
                                     <td></td>
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">8:30-9:00</td>
-                                    <td style="border-bottom: 2px solid  red; background-color: rgb(245, 159, 159);">Wynajął: XYZ</td>
+                                    <td></td>
+                                  
                                     <td></td>
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                     <td></td>
                                     <td></td>
                                 </tr>
@@ -1062,17 +1074,30 @@ if($_SESSION['valueButton']!='true'){
                                     <td></td>
                                     <td></td>
                                     <td></td>
+                                    <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
+                                        <form method="post">
+                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()"><br /><br />
+                                            Informatyka<br>
+                                            Jan Kowalski<br>
+                                            Student
+                                    </td>
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">9:30-10:00</td>
                                     <td></td>
-                                    <td style="border-top: 2px solid gold; background-color: rgb(247, 233, 155);">Nazwa sali</td>
+                                    <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
+                                    <form method="post">
+                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()"><br /><br />
+                                        Nazwa sali<br>
+                                        Szkolenie<br>
+                                        Jan Kowalski<br>
+                                        Pracownik
+                                </td>
                                     <td></td>
-                                    <td></td>
+                                   
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1080,38 +1105,51 @@ if($_SESSION['valueButton']!='true'){
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">10:00-10:30</td>
                                     <td></td>
-                                    <td style="background-color: rgb(247, 233, 155);">Szkolenie</td>
                                     <td></td>
+                                    
+                                   
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
+                                    <form method="post">
+                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()"><br /><br />
+                                        Nazwa sali<br>
+                                        Szkolenie<br>
+                                        Jan Kowalski<br>
+                                        Pracownik
                                     <td></td>
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">10:30-11:00</td>
                                     <td></td>
-                                    <td style="border-bottom: 2px solid gold; background-color: rgb(247, 233, 155);">Jan Kowalski</td>
+                                    <td></td>
+                                    
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">11:00-11:30</td>
                                     <td></td>
                                     <td></td>
-                                    <td style="border-top: 2px solid green; background-color: rgb(99, 228, 99);">Nazwa sali</td>
+                                    <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
+                                    <form method="post">
+                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()"><br /><br />
+                                        Nazwa sali<br>
+                                        Konferencja<br>
+                                        Jan Kowalski<br>
+                                        Os. prywatna
+                                    </td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                   
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">11:30-12:00</td>
                                     <td></td>
                                     <td></td>
-                                    <td style="background-color: rgb(99, 228, 99);">Konferencja</td>
+                                   
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1120,8 +1158,8 @@ if($_SESSION['valueButton']!='true'){
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">12:00-12:30</td>
                                     <td></td>
+                                   
                                     <td></td>
-                                    <td style="border-bottom: 2px solid green; background-color: rgb(99, 228, 99);">Adam Małysz</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1135,7 +1173,13 @@ if($_SESSION['valueButton']!='true'){
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
+                                    <form method="post">
+                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()"><br /><br />
+                                        Nazwa sali<br>
+                                        Szkolenie<br>
+                                        Jan Kowalski<br>
+                                        Pracownik
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">13:00-13:30</td>
@@ -1145,7 +1189,7 @@ if($_SESSION['valueButton']!='true'){
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                    
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">13:30-14:00</td>
@@ -1155,7 +1199,7 @@ if($_SESSION['valueButton']!='true'){
                                     <td></td>
                                     <td></td>
                                     <td></td>
-                                    <td></td>
+                                   
                                 </tr>
                                 <tr>
                                     <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">14:00-14:30</td>
@@ -1284,6 +1328,7 @@ if($_SESSION['valueButton']!='true'){
                     </div>
                 </div>
             </div>
+           </div>
         </div>
         </br>
         </br>
@@ -1417,13 +1462,15 @@ if($_SESSION['valueButton']!='true'){
     }
 </script>
   <!-- OnclickValue -->
-<script>
-    function pickLoan(){
-        <?php
-            $_SESSION['valueButton'] = true;
-        ?>
-    }
-</script>
-
+  <?php
+echo '<script>
+    function pickLoan(){';
+        
+            $_SESSION['valueButton'] = 'true';
+           // $_SESSION['EditTrue'] = 1;
+        
+  echo '}
+</script>';
+?>
 </body>
 </html>

@@ -19,6 +19,7 @@
 table,tr,td,th{
     border-right: 2px solid  rgb(0, 42, 78);
     border-left: 2px solid  rgb(0, 42, 78);
+    
     font-size: 20px;
 }  
 .SearchInput2{
@@ -387,4 +388,20 @@ table,tr,td,th{
   font-size: 20px;
   font-weight: 500;
   color: rgb(3, 77, 143);
+}
+
+.BorderTable{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    /* background: linear-gradient(rgb(221, 239, 255), rgba(255,255,255)); */
+    border: 2px solid rgb(230, 230, 230); 
+    border-radius: 30px;
+    padding: 2%;
+  
+}
+
+.WypozTable{
+  border: 2px solid  rgb(0, 42, 78);
+  background: linear-gradient(rgb(221, 239, 255), rgba(255,255,255));
+  
+ 
 }
