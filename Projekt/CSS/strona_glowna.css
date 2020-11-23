@@ -114,12 +114,29 @@
 }
 .FirstBOX{
   height: auto;
-  border: 2px solid rgb(0, 29, 54);
   border-radius: 5%;
   box-shadow: 0px 0px 25px 25px rgb(3, 77, 143);
   border: 1px solid  rgb(3, 77, 143);
   background-image: linear-gradient(rgb(83, 174, 253),rgb(15, 138, 247), rgb(0, 29, 54));
 }
+.SecondBOX{
+  height: auto;
+  border-radius: 4%;
+  box-shadow: 0px 0px 25px 25px rgb(3, 77, 143);
+  border: 1px solid  rgb(3, 77, 143);
+}
+.SepiaEffect{
+  -webkit-filter: sepia(100%);
+	filter: sepia(100%);
+	-webkit-transition: .7s ease-in-out;
+  transition: .7s ease-in-out;
+}
+.SepiaEffect:hover{
+  -webkit-filter: sepia(0);
+  filter: sepia(0);
+  cursor: pointer;
+}
+
 .Imgcarusel{
   height: auto;
   max-height: 530px;
