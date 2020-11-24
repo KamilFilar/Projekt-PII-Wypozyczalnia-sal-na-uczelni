@@ -174,113 +174,125 @@ if ($_SESSION['islogin'] == '') {
         </br>
     </div>
     <footer class="footer">
-        <div class="container-fluid">
-            <!--First row -->
-            <div class="row justify-content-center">
-                <div class=" col-12 Footer_Quotation Footer_Font"></div>
-            </div>
-            <!-- Second row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-3 col-md-12 col-sm-12 col-12 Footer_COL_A">
-                    <img class="float-left mr-4 mt-3 Logo_Footer" src="./CSS/Main/logo-ur.jpg">
-                    <div class="About_US_Footer">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam vehicula enim,
-                        eget dignissim sem sollicitudin quis.
-                        Sed hendrerit ullamcorper blandit. Duis vel eros commodo, cursus diam vel, maximus neque.
-                        Donec quis sem nec est molestie faucibus.
-                        Spendisse id posuere nunc. Nulla aliquet diam viverra, aliquam augue id, vulputate sem.
-                        Aenean in odio non quam scelerisque suscipit.
-                        Vivamus a vestibulum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </div>
+            <div class="container-fluid">
+                <!--First row -->
+                <div class="row justify-content-center">
+                    <div class=" col-12 Footer_Quotation Footer_Font"></div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-12 Second_Row_Background">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 Footer_COL_B">
-                            <div class="Title_In_Footer Footer_Font">
-                                Może się przydać
+                <!-- Second row -->
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-12 Footer_COL_A">
+                        <img class="float-left mr-4 mt-3 Logo_Footer" src="./CSS/Main/logo-ur.jpg">
+                        <div class="About_US_Footer">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam vehicula enim,
+                            eget dignissim sem sollicitudin quis.
+                            Sed hendrerit ullamcorper blandit. Duis vel eros commodo, cursus diam vel, maximus neque.
+                            Donec quis sem nec est molestie faucibus.
+                            Spendisse id posuere nunc. Nulla aliquet diam viverra, aliquam augue id, vulputate sem.
+                            Aenean in odio non quam scelerisque suscipit.
+                            Vivamus a vestibulum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 Second_Row_Background">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 Footer_COL_B">
+                                <div class="Title_In_Footer Footer_Font">
+                                    Może się przydać
+                                </div>
+                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./strona_glowna.php" id="A_Text"> Strona główna</a></div>
+                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./regulamin.php" id="A_Text"> Regulamin</a></div>
+                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./kontakt.php" id="A_Text"> Kontakt</a></div>
+                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./wynajem_sal.php" id="A_Text"> Nasza oferta</a></div>
+                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./rejestracja.php" id="A_Text"> Rejestracja</a></div>
+                                </br>
                             </div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./strona_glowna.html" id="A_Text"> Strona główna</a></div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./regulamin.html" id="A_Text"> Regulamin</a></div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./kontakt.html" id="A_Text"> Kontakt</a></div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./wynajem_sal.html" id="A_Text"> Nasza oferta</a></div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./rejestracja.html" id="A_Text"> Rejestracja</a></div>
+                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 Footer_COL_A">
+                                <div class="Title_In_Footer Footer_Font">
+                                    Sale w ofercie
+                                </div>
+                                <?php
+                                if ($_SESSION['islogin'] == 'false'){
+                                    echo '<div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./wynajem_sal.php" id="A_Text"> Duże aule</a></div>
+                                    <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./wynajem_sal.php" id="A_Text"> Aule</a></div>
+                                    <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./wynajem_sal.php" id="A_Text"> Sale konferencyjne</a></div>
+                                    <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./wynajem_sal.php" id="A_Text"> Sale sportowe</a></div>
+                                    <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./wynajem_sal.php" id="A_Text"> Sale komputerowe</a></div>';
+                                } else {echo '<div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./duze_aule.php" id="A_Text"> Duże aule</a></div>
+                                     <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./aule.php" id="A_Text"> Aule</a></div>
+                                    <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./sale_konferencyjne.php" id="A_Text"> Sale konferencyjne</a></div>
+                                    <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./sale_sportowe.php" id="A_Text"> Sale sportowe</a></div>
+                                    <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./pracownie_komputerowe.php" id="A_Text"> Sale komputerowe</a></div>';}
+
+                                ?>
+
+                                
+                               
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-12 Footer_COL_B">
+                                <div class="Title_In_Footer Footer_Font">
+                                    Kontakt
+                                </div>
+                                <div class="Contact_Line"><i class="Colorfas fas fa-envelope-open-text"></i><b class="B_Contact_Text"> UR_poczta@gmail.com</b></div>
+                                <div class="SpecialBR1"></br></div>
+                                <div class="Contact_Line"><i class="Colorfas fas fa-phone"></i><b class="B_Contact_Text">
+                                        +123 456 789</b></div>
+                                <div class="SpecialBR1"></br></div>
+                                <div class="Contact_Line"><i class="Colorfas fab fa-twitter"></i><b class="B_Contact_Text"><a href="" id="Contact_Text">Twitter</a></b></div>
+                            </div>
+                        </div>
+                        <div class=" String_In_SocialMedia Footer_Font">
+                            Dołącz do naszych social-media i twórz z nami przyszłość!
+                        </div>
+                        <div class="row justify-content-center Footer_COL_A">
+                            <div class="col-1"></div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer ">
+                                <a href=""><img src="./CSS/Main/facebook.png" class="SocialImage_Footer" /></a>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer">
+                                <a href=""><img src="./CSS/Main/insta.png" class="SocialImage_Footer" /></a>
+                            </div>
+                            <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer">
+                                <a href=""><img src="./CSS/Main/twitter.png" class="SocialImage_Footer" /></a>
+                            </div>
+                            <div class="col-1"></div>
+                            <div class="col-12">
+                                <div class="Links Links1"></div>
+                            </div>
+                            <div class="col-12">
+                                <div class="Links Links2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-12 Footer_COL_A">
+                        <div class="Title_In_Footer Footer_Font">
+                            Zapisz się na Newsletter!
+                        </div>
+                        <div class="Newsletter">
+                            <div class="Newsletter_Text">
+                                Nie chcesz aby przegapiły Cię zniżki na wynajem sal? Chcesz wiedzieć szybciej od innych
+                                o nowościach
+                                na naszym uniwersytecie? Nie zwlekaj i zapisz się na nasz newsletter!
+                            </div>
                             </br>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 Footer_COL_A">
-                            <div class="Title_In_Footer Footer_Font">
-                                Sale w ofercie
+                            <div class="Newsletter_Form">
+                                <form class="form">
+                                    <label for="Mail">Podaj swojego maila: </label></br>
+                                    <input type="text" name="Mail" id="Mail"></br>
+                                    <button class="Newsletter_Button"><span>Subskrybuj</span></button>
+                                </form>
+                                </br>
                             </div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./duze_aule.html" id="A_Text"> Duże aule</a></div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./aule.html" id="A_Text"> Aule</a></div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./sale_konferencyjne.html" id="A_Text"> Sale konferencyjne</a></div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./sale_sportowe.html" id="A_Text"> Sale sportowe</a></div>
-                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./pracownie_komputerowe.html" id="A_Text"> Sale komputerowe</a></div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 Footer_COL_B">
-                            <div class="Title_In_Footer Footer_Font">
-                                Kontakt
-                            </div>
-                            <div class="Contact_Line"><i class="Colorfas fas fa-envelope-open-text"></i><b class="B_Contact_Text"> UR_poczta@gmail.com</b></div>
-                            <div class="SpecialBR1"></br></div>
-                            <div class="Contact_Line"><i class="Colorfas fas fa-phone"></i><b class="B_Contact_Text">
-                                    +123 456 789</b></div>
-                            <div class="SpecialBR1"></br></div>
-                            <div class="Contact_Line"><i class="Colorfas fab fa-twitter"></i><b class="B_Contact_Text"><a href="" id="Contact_Text">Twitter</a></b></div>
-                        </div>
-                    </div>
-                    <div class=" String_In_SocialMedia Footer_Font">
-                        Dołącz do naszych social-media i twórz z nami przyszłość!
-                    </div>
-                    <div class="row justify-content-center Footer_COL_A">
-                        <div class="col-1"></div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer ">
-                            <a href=""><img src="./CSS/Main/facebook.png" class="SocialImage_Footer" /></a>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer">
-                            <a href=""><img src="./CSS/Main/insta.png" class="SocialImage_Footer" /></a>
-                        </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer">
-                            <a href=""><img src="./CSS/Main/twitter.png" class="SocialImage_Footer" /></a>
-                        </div>
-                        <div class="col-1"></div>
-                        <div class="col-12">
-                            <div class="Links Links1"></div>
-                        </div>
-                        <div class="col-12">
-                            <div class="Links Links2"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-12 col-sm-12 col-12 Footer_COL_A">
-                    <div class="Title_In_Footer Footer_Font">
-                        Zapisz się na Newsletter!
-                    </div>
-                    <div class="Newsletter">
-                        <div class="Newsletter_Text">
-                            Nie chcesz aby przegapiły Cię zniżki na wynajem sal? Chcesz wiedzieć szybciej od innych
-                            o nowościach
-                            na naszym uniwersytecie? Nie zwlekaj i zapisz się na nasz newsletter!
-                        </div>
-                        </br>
-                        <div class="Newsletter_Form">
-                            <form class="form">
-                                <label for="Mail">Podaj swojego maila: </label></br>
-                                <input type="text" name="Mail" id="Mail"></br>
-                                <button class="Newsletter_Button"><span>Subskrybuj</span></button>
-                            </form>
-                            </br>
-                        </div>
+                <!--Third row-->
+                <div class="row justify-content-center">
+                    <div class="col-12 Footer_Copyright Footer_Font">
+                        Copyright <b class="CColor"> ©</b> 2020 by <b class="CColor">Kamil Filar</b> & <b class="CColor">Karol Bury</b>
                     </div>
                 </div>
             </div>
-            <!--Third row-->
-            <div class="row justify-content-center">
-                <div class="col-12 Footer_Copyright Footer_Font">
-                    Copyright <b class="CColor"> ©</b> 2020 by <b class="CColor">Kamil Filar</b> & <b class="CColor">Karol Bury</b>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 </body>
 
 </html>

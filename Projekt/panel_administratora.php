@@ -649,10 +649,11 @@ if($_SESSION['valueButton']=='true'){
                                             </button>
                                         </div>
                                     </div>';
-                                            echo '<div id="AlertEdit" class="alert alert-success alert-dismissible fade show">
+                                            echo '<div id="AlertE" class="alert alert-success alert-dismissible fade show">
                                     <strong>Uwaga!</strong> Zamiany zostały pomyślnie zapisane.
                                     <button type="button" class="close" data-dismiss="alert">&times;</button>
-                                </div>';
+                                </div>
+                                ';
                                         } else {
                                             echo '<div class="DataToX">Dane zostaną wczytane w momencie wybrania interesującego Cię wypożyczenia.</div>';
                                         }
@@ -1007,18 +1008,18 @@ if($_SESSION['valueButton']=='true'){
                             <thead>
                                 <tr>
                                     <th scope="col" style="border: 2px solid  rgb(0, 42, 78)"></th>
-                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78)">Poniedziałek</th>
-                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78)">Wtorek</th>
-                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78)">Środa</th>
-                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78)">Czwartek</th>
-                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78)">Piątek</th>
-                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78)">Sobota</th>
-                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78)">Niedziela</th>
+                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">Poniedziałek</th>
+                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">Wtorek</th>
+                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">Środa</th>
+                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">Czwartek</th>
+                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">Piątek</th>
+                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">Sobota</th>
+                                    <th scope="col" style="border: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">Niedziela</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">7:00-7:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">7:00-7:30</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1028,10 +1029,11 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">7:30-8:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">7:30-8:00</td>
                                     <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
                                         <form method="post">
-                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()"><br /><br />
+                                            <input type="submit" value="" class="fas fa-edit fa-lg ButtonEdit" name="Submit1" onclick="pickLoan()">
+                                            </form><br /><br />
                                             Informatyka<br>
                                             Jan Kowalski<br>
                                             Student
@@ -1044,7 +1046,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">8:00-8:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">8:00-8:30</td>
                                     <td></td>
                                     <td></td>
                                    
@@ -1060,7 +1062,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">8:30-9:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">8:30-9:00</td>
                                     <td></td>
                                   
                                     <td></td>
@@ -1070,7 +1072,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">9:00-9:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">9:00-9:30</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1086,7 +1088,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">9:30-10:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">9:30-10:00</td>
                                     <td></td>
                                     <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
                                     <form method="post">
@@ -1103,7 +1105,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">10:00-10:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">10:00-10:30</td>
                                     <td></td>
                                     <td></td>
                                     
@@ -1119,7 +1121,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">10:30-11:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">10:30-11:00</td>
                                     <td></td>
                                     <td></td>
                                     
@@ -1129,7 +1131,7 @@ if($_SESSION['valueButton']=='true'){
                                     
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">11:00-11:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">11:00-11:30</td>
                                     <td></td>
                                     <td></td>
                                     <td rowspan="3" class="WypozTable" style="border-top: 2px solid  rgb(0, 42, 78);">
@@ -1146,7 +1148,7 @@ if($_SESSION['valueButton']=='true'){
                                    
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">11:30-12:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">11:30-12:00</td>
                                     <td></td>
                                     <td></td>
                                    
@@ -1156,7 +1158,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">12:00-12:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">12:00-12:30</td>
                                     <td></td>
                                    
                                     <td></td>
@@ -1166,7 +1168,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">12:30-13:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">12:30-13:00</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1182,7 +1184,7 @@ if($_SESSION['valueButton']=='true'){
                                         Pracownik
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">13:00-13:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">13:00-13:30</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1192,7 +1194,7 @@ if($_SESSION['valueButton']=='true'){
                                     
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">13:30-14:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">13:30-14:00</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1202,7 +1204,7 @@ if($_SESSION['valueButton']=='true'){
                                    
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">14:00-14:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">14:00-14:30</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1212,7 +1214,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">14:30-15:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">14:30-15:00</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1222,7 +1224,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">15:00-15:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">15:00-15:30</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1232,7 +1234,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">15:30-16:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">15:30-16:00</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1242,7 +1244,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">16:00-16:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">16:00-16:30</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1252,7 +1254,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">16:30-17:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">16:30-17:00</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1262,7 +1264,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">17:00-17:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">17:00-17:30</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1272,7 +1274,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">17:30-18:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">17:30-18:00</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1282,7 +1284,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">18:00-18:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">18:00-18:30</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1292,7 +1294,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">18:30-19:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">18:30-19:00</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1302,7 +1304,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">19:00-19:30</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">19:00-19:30</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -1312,7 +1314,7 @@ if($_SESSION['valueButton']=='true'){
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78)">19:30-20:00</td>
+                                    <td scope="row" style="border-bottom: 2px solid  rgb(0, 42, 78); color: rgb(3, 77, 143)">19:30-20:00</td>
                                     <td style="border-bottom: 2px solid  rgb(0, 42, 78)"></td>
                                     <td style="border-bottom: 2px solid  rgb(0, 42, 78)"></td>
                                     <td style="border-bottom: 2px solid  rgb(0, 42, 78)"></td>
@@ -1338,113 +1340,126 @@ if($_SESSION['valueButton']=='true'){
             </br>
         </div>
         <footer class="footer">
-            <div class="container-fluid">
-                <!--First row -->
-                <div class="row justify-content-center">
-                    <div class=" col-12 Footer_Quotation Footer_Font"></div>
+        <div class="container-fluid">
+            <!--First row -->
+            <div class="row justify-content-center">
+                <div class=" col-12 Footer_Quotation Footer_Font"></div>
+            </div>
+            <!-- Second row -->
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12 Footer_COL_A">
+                    <img class="float-left mr-4 mt-3 Logo_Footer" src="./CSS/Main/logo-ur.jpg">
+                    <div class="About_US_Footer">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam vehicula enim,
+                        eget dignissim sem sollicitudin quis.
+                        Sed hendrerit ullamcorper blandit. Duis vel eros commodo, cursus diam vel, maximus neque.
+                        Donec quis sem nec est molestie faucibus.
+                        Spendisse id posuere nunc. Nulla aliquet diam viverra, aliquam augue id, vulputate sem.
+                        Aenean in odio non quam scelerisque suscipit.
+                        Vivamus a vestibulum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
                 </div>
-                <!-- Second row -->
-                <div class="row justify-content-center">
-                    <div class="col-lg-3 col-md-12 col-sm-12 col-12 Footer_COL_A">
-                        <img class="float-left mr-4 mt-3 Logo_Footer" src="./CSS/Main/logo-ur.jpg">
-                        <div class="About_US_Footer">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquam vehicula enim,
-                            eget dignissim sem sollicitudin quis.
-                            Sed hendrerit ullamcorper blandit. Duis vel eros commodo, cursus diam vel, maximus neque.
-                            Donec quis sem nec est molestie faucibus.
-                            Spendisse id posuere nunc. Nulla aliquet diam viverra, aliquam augue id, vulputate sem.
-                            Aenean in odio non quam scelerisque suscipit.
-                            Vivamus a vestibulum est. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 Second_Row_Background">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 Footer_COL_B">
-                                <div class="Title_In_Footer Footer_Font">
-                                    Może się przydać
-                                </div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./strona_glowna.html" id="A_Text"> Strona główna</a></div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./regulamin.html" id="A_Text"> Regulamin</a></div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./kontakt.html" id="A_Text"> Kontakt</a></div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./wynajem_sal.html" id="A_Text"> Nasza oferta</a></div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./rejestracja.html" id="A_Text"> Rejestracja</a></div>
-                                </br>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 Second_Row_Background">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 Footer_COL_B">
+                            <div class="Title_In_Footer Footer_Font">
+                                Może się przydać
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-6 col-6 Footer_COL_A">
-                                <div class="Title_In_Footer Footer_Font">
-                                    Sale w ofercie
-                                </div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./duze_aule.html" id="A_Text"> Duże aule</a></div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./aule.html" id="A_Text"> Aule</a></div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./sale_konferencyjne.html" id="A_Text"> Sale konferencyjne</a></div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./sale_sportowe.html" id="A_Text"> Sale sportowe</a></div>
-                                <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./pracownie_komputerowe.html" id="A_Text"> Sale komputerowe</a></div>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-12 col-12 Footer_COL_B">
-                                <div class="Title_In_Footer Footer_Font">
-                                    Kontakt
-                                </div>
-                                <div class="Contact_Line"><i class="Colorfas fas fa-envelope-open-text"></i><b class="B_Contact_Text"> UR_poczta@gmail.com</b></div>
-                                <div class="SpecialBR1"></br></div>
-                                <div class="Contact_Line"><i class="Colorfas fas fa-phone"></i><b class="B_Contact_Text">
-                                        +123 456 789</b></div>
-                                <div class="SpecialBR1"></br></div>
-                                <div class="Contact_Line"><i class="Colorfas fab fa-twitter"></i><b class="B_Contact_Text"><a href="" id="Contact_Text">Twitter</a></b></div>
-                            </div>
-                        </div>
-                        <div class=" String_In_SocialMedia Footer_Font">
-                            Dołącz do naszych social-media i twórz z nami przyszłość!
-                        </div>
-                        <div class="row justify-content-center Footer_COL_A">
-                            <div class="col-1"></div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer ">
-                                <a href=""><img src="./CSS/Main/facebook.png" class="SocialImage_Footer" /></a>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer">
-                                <a href=""><img src="./CSS/Main/insta.png" class="SocialImage_Footer" /></a>
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer">
-                                <a href=""><img src="./CSS/Main/twitter.png" class="SocialImage_Footer" /></a>
-                            </div>
-                            <div class="col-1"></div>
-                            <div class="col-12">
-                                <div class="Links Links1"></div>
-                            </div>
-                            <div class="col-12">
-                                <div class="Links Links2"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-12 col-sm-12 col-12 Footer_COL_A">
-                        <div class="Title_In_Footer Footer_Font">
-                            Zapisz się na Newsletter!
-                        </div>
-                        <div class="Newsletter">
-                            <div class="Newsletter_Text">
-                                Nie chcesz aby przegapiły Cię zniżki na wynajem sal? Chcesz wiedzieć szybciej od innych
-                                o nowościach
-                                na naszym uniwersytecie? Nie zwlekaj i zapisz się na nasz newsletter!
-                            </div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./strona_glowna.php"
+                                    id="A_Text"> Strona główna</a></div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./regulamin.php"
+                                    id="A_Text"> Regulamin</a></div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./kontakt.php"
+                                    id="A_Text"> Kontakt</a></div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./wynajem_sal.php"
+                                    id="A_Text"> Nasza oferta</a></div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./rejestracja.php"
+                                    id="A_Text"> Rejestracja</a></div>
                             </br>
-                            <div class="Newsletter_Form">
-                                <form class="form">
-                                    <label for="Mail">Podaj swojego maila: </label></br>
-                                    <input type="text" name="Mail" id="Mail"></br>
-                                    <button class="Newsletter_Button"><span>Subskrybuj</span></button>
-                                </form>
-                                </br>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-6 col-6 Footer_COL_A">
+                            <div class="Title_In_Footer Footer_Font">
+                                Sale w ofercie
                             </div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./duze_aule.php"
+                                    id="A_Text"> Duże aule</a></div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./aule.php"
+                                    id="A_Text"> Aule</a></div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a
+                                    href="./sale_konferencyjne.php" id="A_Text"> Sale konferencyjne</a></div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a href="./sale_sportowe.php"
+                                    id="A_Text"> Sale sportowe</a></div>
+                            <div class="Hrefs_Footer"><i class="fas fa-angle-right"></i><a
+                                    href="./pracownie_komputerowe.php" id="A_Text"> Sale komputerowe</a></div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-12 col-12 Footer_COL_B">
+                            <div class="Title_In_Footer Footer_Font">
+                                Kontakt
+                            </div>
+                            <div class="Contact_Line"><i class="Colorfas fas fa-envelope-open-text"></i><b
+                                    class="B_Contact_Text"> UR_poczta@gmail.com</b></div>
+                            <div class="SpecialBR1"></br></div>
+                            <div class="Contact_Line"><i class="Colorfas fas fa-phone"></i><b class="B_Contact_Text">
+                                    +123 456 789</b></div>
+                            <div class="SpecialBR1"></br></div>
+                            <div class="Contact_Line"><i class="Colorfas fab fa-twitter"></i><b
+                                    class="B_Contact_Text"><a href="" id="Contact_Text">Twitter</a></b></div>
+                        </div>
+                    </div>
+                    <div class=" String_In_SocialMedia Footer_Font">
+                        Dołącz do naszych social-media i twórz z nami przyszłość!
+                    </div>
+                    <div class="row justify-content-center Footer_COL_A">
+                        <div class="col-1"></div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer ">
+                            <a href=""><img src="./CSS/Main/facebook.png" class="SocialImage_Footer" /></a>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer">
+                            <a href=""><img src="./CSS/Main/insta.png" class="SocialImage_Footer" /></a>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-3 ImageBox_Footer">
+                            <a href=""><img src="./CSS/Main/twitter.png" class="SocialImage_Footer" /></a>
+                        </div>
+                        <div class="col-1"></div>
+                        <div class="col-12">
+                            <div class="Links Links1"></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="Links Links2"></div>
                         </div>
                     </div>
                 </div>
-                <!--Third row-->
-                <div class="row justify-content-center">
-                    <div class="col-12 Footer_Copyright Footer_Font">
-                        Copyright <b class="CColor"> ©</b> 2020 by <b class="CColor">Kamil Filar</b> & <b class="CColor">Karol Bury</b>
+                <div class="col-lg-3 col-md-12 col-sm-12 col-12 Footer_COL_A">
+                    <div class="Title_In_Footer Footer_Font">
+                        Zapisz się na Newsletter!
+                    </div>
+                    <div class="Newsletter">
+                        <div class="Newsletter_Text">
+                            Nie chcesz aby przegapiły Cię zniżki na wynajem sal? Chcesz wiedzieć szybciej od innych
+                            o nowościach
+                            na naszym uniwersytecie? Nie zwlekaj i zapisz się na nasz newsletter!
+                        </div>
+                        </br>
+                        <div class="Newsletter_Form">
+                            <form class="form"> 
+                                <label for="Mail" class="mail3">Podaj swojego maila: </label></br>
+                                <input type="text" name="Mail" id="Mail" class="mail2"></br>
+                                <button class="Newsletter_Button"><span>Subskrybuj</span></button>
+                            </form>
+                            </br>
+                        </div>
                     </div>
                 </div>
             </div>
-        </footer>
+            <!--Third row-->
+            <div class="row justify-content-center">
+                <div class="col-12 Footer_Copyright Footer_Font">
+                    Copyright <b class="CColor"> ©</b> 2020 by <b class="CColor">Kamil Filar</b> & <b
+                        class="CColor">Karol Bury</b>
+                </div>
+            </div>
+        </div>
+    </footer>
     </div>
 
     <!-- Alerts -->
@@ -1458,7 +1473,7 @@ if($_SESSION['valueButton']=='true'){
     }
 
     function showAlertEdit() {
-        document.getElementById('AlertEdit').style.display = "block";
+        document.getElementById('AlertE').style.display = "block";
     }
 </script>
   <!-- OnclickValue -->
