@@ -239,8 +239,7 @@ if ($_SESSION['islogin'] == '') {
                                                 </script>
 
                                                 <div id="AlertS" class="alert alert-success alert-dismissible fade show">
-                                                    <strong>Uwaga!</strong> Pomyślnie wysłano prośbę o zatwierdzenie
-                                                    rezerwacji sali.
+                                                    <strong>Uwaga!</strong> Pomyślnie zarezerwowano salę.
                                                     <button type="button" class="close" data-dismiss="alert">&times;</button>
                                                 </div>
                                                 <div id="AlertE" class="alert alert-danger alert-dismissible fade show">
