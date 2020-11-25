@@ -233,9 +233,15 @@ if ($_SESSION['islogin'] == '') {
                 <div class="row justify-content-center">
                     <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                         </br></br>
-                        <div class="text-center">
-                            <a href="rejestracja.php" style="text-decoration: none;"><button class="Button_Normal"> Zarejestruj się </button></a>
-                        </div>
+                        
+                        <?php
+                        if ($_SESSION['islogin'] == 'false') {
+                        echo '<div class="text-center">
+                        <a href="rejestracja.php" style="text-decoration: none;"><button class="Button_Normal"> Zarejestruj się </button></a>
+                    </div>';
+                    }
+                    ?>
+                            
                         </br></br>
                     </div>
                 </div>
