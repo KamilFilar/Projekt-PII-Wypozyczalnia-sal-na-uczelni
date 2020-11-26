@@ -29,9 +29,9 @@ table,tr,td,th{
   text-indent: 1em;
 }
 .SearchButton2{
+  margin-left: -2px;
   border: 2px solid rgb(0, 29, 54);
   height: 40px;
-  margin-left: -5px;
   background-color: rgb(3, 77, 143);
   cursor: pointer;
 }

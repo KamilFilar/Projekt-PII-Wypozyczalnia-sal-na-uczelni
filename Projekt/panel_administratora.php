@@ -680,8 +680,7 @@ if($_SESSION['valueButton']=='true'){
                             <div class="col col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="row justify-content-center">
                                     <div class="col col-xl-8 col-lg-10 col-md-10 col-sm-10 col-10 text-center">
-                                        <input class='SearchInput2' type='search' placeholder='Wyszukaj... ' />
-                                        <button class='SearchButton2' type='submit'><i class='fa fa-search' style='color: white;'></i></button>
+                                    <input class='SearchInput2' type='search' placeholder='Wyszukaj... '><button class='SearchButton2' type='submit'><i class='fa fa-search' style='color: white;'></i></button>
                                     </div>
                                 </div>
                                 </br></br>
